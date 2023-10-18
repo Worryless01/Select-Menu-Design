@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select Menu Design</title>
+    <link rel="stylesheet" href="index.css">
+</head> 
+<body>
+    <div class="hero">
+        <div class="selector">
+            <div id="selectField">
+                <p id="selectText">Select Social Media</p>
+                <img src="SelectMenu_Img/arrow.png" id="arrowIcon">
+            </div>
+
+            <ul id="lists" class="hide">
+                <li class="options">
+                    <img src="SelectMenu_Img/youtube.png">
+                    <p>Youtube</p>
+                </li>
+                <li class="options">
+                    <img src="SelectMenu_Img/instagram.png">
+                    <p>Instagram</p>
+                </li>
+                <li class="options">
+                    <img src="SelectMenu_Img/twitter.png">
+                    <p>Twitter</p>
+                </li>
+                <li class="options">
+                    <img src="SelectMenu_Img/whatsapp.png">
+                    <p>Whatsapp</p>
+                </li>
+                <li class="options">
+                    <img src="SelectMenu_Img/messenger.jpeg">
+                    <p>Messenger</p>
+                </li>
+                <li class="options">
+                    <img src="SelectMenu_Img/linkedin.png">
+                    <p>Linkedin</p>
+                </li>
+                <li class="options">
+                    <img src="SelectMenu_Img/tiktok.png">
+                    <p>TikTok</p>
+                </li>
+                <li class="options">
+                    <img src="SelectMenu_Img/snapchat.jpeg">
+                    <p>Snapchat</p>
+                </li>
+                <li class="options">
+                    <img src="SelectMenu_Img/reddit.jpeg">
+                    <p>Reddit</p>
+                </li>
+                <li class="options">
+                    <img src="SelectMenu_Img/behance.jpeg">
+                    <p>Behance</p>
+                </li>
+                <li class="options">
+                    <img src="SelectMenu_Img/pinterest.png">
+                    <p>Pinterest</p>
+                </li>
+            </ul>
+
+        </div> 
+    </div>
+
+
+
+
+
+    <script>
+
+        var selectField = document.getElementById("selectField");
+        var selectText = document.getElementById("selectText");
+        var options = document.getElementsByClassName("options");
+        var list = document.getElementById("lists");
+        var arrowIcon = document.getElementById("arrowIcon");
+
+        selectField.onclick = function(){
+            list.classList.toggle("hide");
+            arrowIcon.classList.toggle("rotate");
+        }
+
+        for (options of options){
+            options.onclick = function() {
+                selectText.innerHTML = this.textContent;
+                list.classList.toggle("hide");
+                arrowIcon.classList.toggle("rotate");
+            }
+        }
+
+    </script>
+
+
+</body>
+</html>
